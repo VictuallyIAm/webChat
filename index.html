@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webchat</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="identitySelectContainer">
+      <form class="identForm" id="identForm">
+        <div class="indentSingleLine">Select your profile</div>
+        <div class="indentSingleLine">
+          <select id="indentitySelect" class="formControl"></select>
+        </div>
+        <div class="indentSingleLine">
+          <button class="btn btnPrimary" type="submit">Start</button>
+        </div>
+      </form>
+    </div>
+    <div class="container" id="main" style="display: none">
+      <div class="sidebar">
+        <div class="leftHeader">
+          <div class="searchInput">
+            <input
+              id="search-input"
+              type="text"
+              dir="auto"
+              placeholder="Search"
+              class="form-control"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <ul id="chat-list" class="chat-list"></ul>
+      </div>
+
+      <div class="chat-area">
+        <div class="currentChat" id="chatHeader">
+          <img src="" height="60px" />
+          <span></span>
+        </div>
+        <div id="chat-window" class="chat-window">
+          <div id="messages"></div>
+          <div class="messageInput" style="display: none">
+            <input
+              id="messageInput"
+              type="text"
+              dir="auto"
+              placeholder="Message"
+              class="form-control"
+              autocomplete="off"
+              maxlength="999"
+            />
+            <button class="sendBtn"><i class="fa fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/index.js" type="module"></script>
+</html>
